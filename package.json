@@ -1,0 +1,25 @@
+{
+  "name": "restaurants-project",
+  "version": "1.0.0",
+  "description": "a restaurant app built using node.js and express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e css,ejs,js,json --watch app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sihong31/restaurants-project.git"
+  },
+  "author": "Sihong Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sihong31/restaurants-project/issues"
+  },
+  "homepage": "https://github.com/Sihong31/restaurants-project#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "reload": "^1.1.0"
+  }
+}
