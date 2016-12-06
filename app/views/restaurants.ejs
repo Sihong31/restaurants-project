@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include partials/template/head.ejs %>
+	</head>
+	<body id="<%=pageID%>">
+		<% include partials/template/header.ejs %>
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>List of your favorite restaurants</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 restaurant-output">
+				<% restaurants.forEach(function(item) { %>
+						<h2><%=item.name%></h2>
+						<h3><%=item.location%></h3>
+						<p><strong>Category:</strong> <%=item.category%></p>
+						<p><strong>Your favorite:</strong> <%=item.favorite%></p>
+						<p><strong>Your description:</strong> <%=item.description%></p>
+				<%	});	%>
+				</div>
+
+				<div class="col-sm-6">
+					<h2>Add a new restaurant</h2>
+					<form name="restaurantForm" class="restaurantForm">
+					  <div class="form-group">
+					    <label for="name">Name</label>
+					    <input class="form-control" id="form-name" placeholder="Enter name">
+					  </div>					  
+					  <div class="form-group">
+					    <label for="name">Location</label>
+					    <input class="form-control" id="form-location" placeholder="Enter location">
+					  </div>					  
+					  <div class="form-group">
+					    <label for="name">Category</label>
+					    <input class="form-control" id="form-category" placeholder="Enter category">
+					  </div>					  
+					  <div class="form-group">
+					    <label for="name">Your favorite</label>
+					    <input class="form-control" id="form-favorite" placeholder="Enter your favorite">
+					  </div>					  
+					  <div class="form-group">
+					    <label for="name">Description</label>
+					    <input class="form-control" id="form-description" placeholder="Enter a brief description">
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+	<% include partials/template/jsdefaults.ejs %>
+</html>

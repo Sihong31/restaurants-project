@@ -2,9 +2,11 @@
   "name": "restaurants-project",
   "version": "1.0.0",
   "description": "a restaurant app built using node.js and express.js",
-  "main": "index.js",
+  "main": "app/app.js",
   "scripts": {
-    "start": "nodemon -e css,ejs,js,json --watch app"
+    "build-sass": "node-sass ./app/public/scss/style.scss ./app/public/css/style.css",
+    "watch-sass": "npm run build:sass -- -w",
+    "start": "nodemon -e css,ejs,js,json,scss --watch app"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
     "body-parser": "^1.15.2",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
+    "node-sass": "^3.13.0",
     "reload": "^1.1.0"
   }
 }
