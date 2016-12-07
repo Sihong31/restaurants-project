@@ -21,4 +21,14 @@ router.post('/api', function(req, res){
 	res.json(restaurantData.restaurants);
 });
 
+router.delete('/api/:id', function(req, res) {
+	restaurantData.restaurants.splice(req.params.id, 1);
+	fs.writeFile('app/data/restaurants.json', JSON.stringify(restaurantData, 'utf8'), function(err) {
+		if (err) {
+			console.log(err);
+		}
+	});
+	res.json(restaurantData.restaurants);
+});
+
 module.exports = router;
